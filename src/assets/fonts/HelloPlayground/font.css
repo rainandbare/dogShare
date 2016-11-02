@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HelloPlayground';
+  src: url('HelloPlayground.eot');
+  src: url('HelloPlayground.woff2') format('woff2'),
+       url('HelloPlayground.woff') format('woff'),
+       url('HelloPlayground.ttf') format('truetype'),
+       url('HelloPlayground.svg#HelloPlayground') format('svg'),
+       url('HelloPlayground.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

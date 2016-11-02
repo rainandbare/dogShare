@@ -1,0 +1,41 @@
+@import 'variables';
+
+button{
+	background: none;
+    border: none;
+}
+
+.icon {
+	background: $dark;
+	width: 180px;
+	height: 180px;
+	border-radius: 10px;  
+	color: $light;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 80%;
+	}
+}
+
+div.poo {
+	background: $highlight1;
+}
+div.walk {
+	background: $highlight2;
+	img{
+		width: 60%;
+		margin-left: 12%; 
+	}
+}
+div.note {
+	background: $main;
+	img{
+		width: 70%;
+		margin-left:9% 
+	}
+}
+div.food {
+	background: $mainLight;
+}
