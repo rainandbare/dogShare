@@ -1,4 +1,4 @@
-import { Router, Route, browserHistory, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import firebase from 'firebase';

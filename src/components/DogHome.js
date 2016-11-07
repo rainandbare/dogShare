@@ -7,13 +7,16 @@ import TheDate from './TheDate';
 
 var DogHome = React.createClass({
   render: function() {
-    var events = this.props.events;
+    // var events = this.props.events;
     return(<div>
       <main className="dog-home">
+      <div>{this.props.currentUser}</div>
+      <div>{this.props.currentDog}</div>
        <TheDate />
        {//background url src for profile pic
           }       
-          <Iconlist events={ this.props.events } />
+          <Iconlist events={ this.props.events }
+                    currentDog = {this.props.currentDog} />
            </main>
       </div>
       )

@@ -1,6 +1,6 @@
 import React from 'react';
 import TheDate from './TheDate';
-import { browserHistory, Link, hashHistory } from 'react-router'; 
+import { browserHistory, Link } from 'react-router'; 
 
 //Components
 import Icon from './Icon.js';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { browserHistory, hashHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 //Component
 import Icon from './Icon.js';
 // import '../sass/App.scss';

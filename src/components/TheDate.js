@@ -8,7 +8,7 @@ var TheDate = React.createClass({
       var daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       var monthsArray = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-      var dateObject = new Date;
+      var dateObject = new Date();
       var day = daysArray[dateObject.getDay()];
       var month = monthsArray[dateObject.getMonth()];
       var date = dateObject.getDate();

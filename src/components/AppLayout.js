@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from 'firebase';
-import { browserHistory, hashHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 //Components
 import '../sass/App.scss';
@@ -51,7 +51,7 @@ var AppLayout = React.createClass({
     }
   },
   assignDog: function(dog){
-    console.log("We picked " + dog);
+    // console.log("We picked " + dog);
     this.setState({
       currentDog: dog
     })
@@ -64,14 +64,14 @@ var AppLayout = React.createClass({
     var h = (d.getHours()<10?'0':'') + d.getHours();
     var m = (d.getMinutes()<10?'0':'') + d.getMinutes();
     var time = h + ':' + m;
-    console.log(time);
+    // console.log(time);
     return time;
   },
    getDate: function() {
       var daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       var monthsArray = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-      var dateObject = new Date;
+      var dateObject = new Date();
       var day = daysArray[dateObject.getDay()];
       var month = monthsArray[dateObject.getMonth()];
       var date = dateObject.getDate();
@@ -120,7 +120,7 @@ var AppLayout = React.createClass({
 
    this.firebaseRef = firebase.database().ref("events");
    this.firebaseRef.on("child_added", (dataSnapshot) => {
-       console.log('child added');
+       // console.log('child added');
        var events = component.state.events;
        events[dataSnapshot.key] = dataSnapshot.val();
        component.setState({

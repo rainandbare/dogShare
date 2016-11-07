@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from 'firebase';
-import { browserHistory, hashHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 var Login2 = React.createClass({
   getInitialState: function() {
@@ -65,7 +65,7 @@ var Login2 = React.createClass({
       });
     }
     result.then((data) => {
-      hashHistory.push('/');
+      browserHistory.push("/");
     })
     .catch((error) => {
       this.setState({error: error.message});

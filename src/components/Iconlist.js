@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Icon from './Icon';
-import TheDate from './TheDate' 
 import pooIcon from '../assets/poos.png';
 import walkIcon from '../assets/walks.png';
 import foodIcon from '../assets/food.png';
@@ -57,19 +56,21 @@ var Food = React.createClass({
 })
 
 var Item = React.createClass({
-	
 	render: function() {
 		var count=0;
 		var lastTime=null;
 		var events = this.props.events;
 		var date = this.getDate();
+		console.log(this.props, "this.props")
 		var currentDog = this.props.currentDog;
 		return (
 			<li className={ this.props.type }>
               <div className="flex-group">
               		     { <div>{ Object.keys(events).map((id) => {
-		              		if ( events[id].event === this.props.type && events[id].eventDate === date  &&  events[id].dog === currentDog){
-		              			//console.log(events[id].eventTime);
+              		     	// console.log(events[id].dog, "events[id].dog");
+              		     	// console.log(currentDog, "currentDog")
+		              		if ( events[id].event === this.props.type && events[id].eventDate === date && events[id].dog === currentDog){
+          					    console.log("working")
           					    var timeArray = [];
           					    timeArray.push(events[id].eventTime);
           					    lastTime = timeArray.pop();
@@ -181,21 +182,25 @@ var Iconlist = React.createClass({
 				  image={pooIcon}
 				  link="/add-poo"
 				  events={ this.props.events }
+				  currentDog={this.props.currentDog}
 				  />
 			<Item type="walk"
 				  image={walkIcon}
 				  link="/add-walk"
 				  events={ this.props.events }
+				  currentDog={this.props.currentDog}
 				  />
 			<Item type="food"
 				  image={foodIcon}
 				  link="/add-food"
 				  events={ this.props.events }
+				  currentDog={this.props.currentDog}
 				  />
 			<Item type="note"
 				  image={noteIcon}
 				  link="/add-note"
 				  events={ this.props.events }
+				  currentDog={ this.props.currentDog }
 				   />
  		</ul>
    )

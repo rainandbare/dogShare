@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import firebase from 'firebase';
-import { browserHistory, hashHistory, Link } from 'react-router';
+import React from 'react';
+import { browserHistory, Link } from 'react-router';
 
 //Components
 
@@ -21,14 +20,14 @@ var ChooseDog = React.createClass({
             Object.keys(events).map((id) =>{
                 if (events[id].users !== undefined) {
                     var users = events[id].users;
-                    console.log(currentUser, "currentUser");
+                    // console.log(currentUser, "currentUser");
                     var a = users.indexOf(currentUser);
-                    console.log(a, "index");
+                    // console.log(a, "index");
                     if ( a !== -1 ){
                     return <div key={ id } className="event"> 
                               <button onClick={ this.assignDog }>
                                 <label>{ events[id].dog }</label>
-                                <img id={ events[id].dog } src={ events[id].picURL }/>
+                                <img id={ events[id].dog } src={ events[id].picURL } alt={ events[id].dog } />
                               </button>
                             </div>
                   }
